@@ -1,2 +1,2 @@
 # fresh
-first time to use Github
+first time to use Github.
