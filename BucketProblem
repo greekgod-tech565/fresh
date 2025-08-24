@@ -1,0 +1,24 @@
+int jug1 = 0;
+        int jug2 = 0;
+        int target = 2;
+        int cap_jug1 = 7;
+        int cap_jug2 = 4;
+        while (jug1!=target||jug2!=target) {
+            if(jug1==target||jug2==target){
+                System.out.println("Goal reached: Jug1=" + jug1 + " Jug2=" + jug2);
+                break;
+            }
+            else {
+                if (jug1 == 0) {
+                    jug1 = cap_jug1;
+                } else if (jug2 != cap_jug2) {
+                    int transfer = Math.min(jug1, cap_jug2 - jug2);
+                    jug1 -= transfer;
+                    jug2 += transfer;
+                    System.out.println("Transfer: Jug1=" + jug1 + " Jug2=" + jug2);
+                } else if (jug2 == cap_jug2) {
+                    jug2 = 0;
+                }
+            }
+
+        }
